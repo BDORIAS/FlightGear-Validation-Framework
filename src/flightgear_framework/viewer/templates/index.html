@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FlightGear Telemetry Viewer</title>
+    <link rel="stylesheet" href="/static/viewer.css" />
+    <script src="/static/plotly.min.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">FlightGear Test Framework</p>
+          <h1 id="profile-title">Telemetry Viewer</h1>
+        </div>
+        <div class="topbar-actions">
+          <div class="topbar-meta" id="topbar-meta"></div>
+          <button id="report-button" class="report-button" type="button">
+            PDF Report
+          </button>
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">
+            Dark mode
+          </button>
+        </div>
+      </header>
+
+      <main class="layout">
+        <aside class="sidebar">
+          <section class="panel">
+            <h2>Focus</h2>
+            <div id="focus-summary" class="kv-list"></div>
+          </section>
+          <section class="panel">
+            <h2>Phases</h2>
+            <div id="phase-list" class="phase-list"></div>
+          </section>
+          <section class="panel">
+            <h2>Logs</h2>
+            <div id="log-list" class="log-list"></div>
+          </section>
+        </aside>
+
+        <section class="content">
+          <section class="metrics-grid" id="metrics-grid"></section>
+
+          <section class="panel">
+            <div class="panel-header">
+              <div>
+                <h2>Signals</h2>
+                <p id="group-description"></p>
+              </div>
+              <div class="tab-row" id="group-tabs"></div>
+            </div>
+            <div class="chart-grid" id="chart-grid"></div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-header">
+              <div>
+                <h2>Raw Variables</h2>
+                <p id="raw-count"></p>
+              </div>
+              <div class="raw-actions">
+                <input id="raw-search" type="search" placeholder="Filter variables" />
+                <button id="raw-first">First 12</button>
+                <button id="raw-all">All</button>
+                <button id="raw-clear">Clear</button>
+              </div>
+            </div>
+            <div id="raw-variable-list" class="variable-list"></div>
+            <div id="raw-chart-grid" class="chart-grid"></div>
+          </section>
+        </section>
+      </main>
+    </div>
+    <section id="print-report" class="print-report" aria-hidden="true"></section>
+    <script src="/static/viewer.js?v=report"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+# Main FlightGear Framework configuration
+framework:
+  name: "FlightGear Test Framework"
+  version: "1.0.0"
+  
+flightgear:
+  # FlightGear connection configuration
+  connection:
+    host: "localhost"
+    port: 5401
+    protocol: "tcp"
+    timeout: 30
+    response_timeout: 1.2
+  
+  # Simulator configuration
+  simulator:
+    executable: "fgfs"  # Command used to run FlightGear
+    # Optional. Leave empty to let FlightGear resolve its data path, or set FG_ROOT.
+    data_dir: ""
+    default_aircraft: "c172p"
+    default_airport: "BIKF"
+    default_runway: "29"
+    disable_terrasync: false
+    
+database:
+  # Results database configuration
+  type: "sqlite"
+  path: "data/test_results.db"
+  
+testing:
+  # Test configuration
+  parallel_workers: 4
+  timeout_seconds: 300
+  retry_failed_tests: 2
+  
+reporting:
+  # Report configuration
+  output_dir: "reports"
+  formats: ["html", "json", "xml"]
+  include_screenshots: true

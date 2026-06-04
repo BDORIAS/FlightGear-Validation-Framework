@@ -1,0 +1,16 @@
+venv_flightgear/
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyd.delete-me
+*.so
+*.dylib
+.pytest_cache/
+.env.console
+build/
+
+# Generated outputs from simulator runs and the viewer.
+data/results/*
+!data/results/.gitkeep
+
+reports/
