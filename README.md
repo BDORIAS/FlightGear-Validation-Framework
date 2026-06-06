@@ -138,3 +138,24 @@ To build the native extension from the project root:
 ```
 
 Compiled native binaries are ignored by Git because they are platform-specific.
+
+## Contributors
+
+- Brayan Sarmiento <bdaniel640@gmail.com>
+- Maria Moreno <mariacmoreno32@gmail.com>
+
+## Attribution
+
+This project is maintained by the contributors listed above and builds on the
+open-source FlightGear simulator ecosystem. FlightGear, JSBSim, Python, Plotly,
+and related libraries remain the property of their respective authors and
+communities.
+
+## References And Documentation
+
+- [FlightGear Manual](https://flightgear.sourceforge.net/manual/)
+- [FlightGear Wiki](https://wiki.flightgear.org/)
+- [FlightGear Property Tree](https://wiki.flightgear.org/Property_Tree)
+- [FlightGear Telnet Usage](https://wiki.flightgear.org/Telnet_usage)
+- [JSBSim Documentation](https://jsbsim-team.github.io/jsbsim/)
+- [Plotly Python Documentation](https://plotly.com/python/)
